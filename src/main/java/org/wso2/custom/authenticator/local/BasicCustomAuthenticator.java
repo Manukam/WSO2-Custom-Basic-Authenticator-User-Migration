@@ -136,7 +136,7 @@ public class BasicCustomAuthenticator extends BasicAuthenticator {
 
             if (log.isDebugEnabled()) {
                 for (String uri : userClaims.keySet()) {
-                    log.debug("Old Userstore Claim : " + uri + " value : " + userClaims.get(uri));
+                    log.debug("Old UserStore Claim : " + uri + " value : " + userClaims.get(uri));
                 }
             }
 
