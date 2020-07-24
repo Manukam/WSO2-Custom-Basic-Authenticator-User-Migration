@@ -3,15 +3,16 @@
 Migrate users from the old userstore (default embedded ldap and h2 db) seamlessly without asking users to create new passwords
 Steps to deploy
 
-Build the component by running "mvn clean install"
-Copy following jar file which can be found in target directory of the component into <IS_HOME>/repository/components/dropins/ org.wso2.custom.authenticator.local-1.0.0.jar
-Add following block under <AuthenticatorConfigs> in <IS_HOME>/repository/conf/identity/application-authentication.xml
-    <AuthenticatorConfig name="MultiAttributeAuthenticator" enabled="true">
+Build the component by running `mvn clean install`
+Copy following jar file which can be found in target directory of the component into <IS_HOME>/repository/components/dropins/ `org.wso2.custom.authenticator.local-1.0.0.jar`
+
+Add following block under `<AuthenticatorConfigs>` in <IS_HOME>/repository/conf/identity/application-authentication.xml
+   `<AuthenticatorConfig name="MultiAttributeAuthenticator" enabled="true">
         <Parameter name="EnableUserMigration">true</Parameter>
         <Parameter name="OldUserStoreDomain">OLDUSERSTORE</Parameter>
         <Parameter name="NewUserStoreDomain">PRIMARY</Parameter>
         <Parameter name="AuthMechanism">basic</Parameter>
-    </AuthenticatorConfig>
+    </AuthenticatorConfig>`
   
 Use "CustomAuthenticator" in authentication steps in Local and Outbound authentication config of the service providers instead of "basic"
 Explanation of the configuration parameters
