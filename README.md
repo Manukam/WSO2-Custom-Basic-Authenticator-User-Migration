@@ -1,6 +1,7 @@
 # WSO2-Custom-Basic-Authenticator-User-Migration
 
-Migrate users from the old userstore (default embedded ldap and h2 db) seamlessly without asking users to create new passwords
+Migrate users from the old userstore (default embedded ldap and h2 db) seamlessly without asking users to create new passwords.
+
 Steps to deploy
 
 Build the component by running `mvn clean install`
