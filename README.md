@@ -15,13 +15,13 @@ Add following block under `<AuthenticatorConfigs>` in **<IS_HOME>/repository/con
         <Parameter name="OldUserStoreDomain">OLDUSERSTORE</Parameter>
         <Parameter name="NewUserStoreDomain">PRIMARY</Parameter>
         <Parameter name="AuthMechanism">basic</Parameter>
-    </AuthenticatorConfig>
+ </AuthenticatorConfig>
  ```
   
-Use "CustomAuthenticator" in authentication steps in Local and Outbound authentication config of the service providers instead of "basic"
+Use `CustomAuthenticator` in authentication steps in Local and Outbound authentication config of the service providers instead of `basic`
 Explanation of the configuration parameters
 
-EnableUserMigration: Specifies whether to migrate users from the old userstore to new userstore
-OldUserStoreDomain: Userstore domain of the secodnary userstore which is pointed to the old userstore.
-NewUserStoreDomain: Where the users should be migrated to from the old usersore
-AuthMechanism: This is to tell identity server to consider this authenticator also using the "basic" auth mechanism. This is useful if you are trying to SSO with other service providers which are using default basic authenticator.
+`EnableUserMigration`: Specifies whether to migrate users from the old userstore to new userstore
+`OldUserStoreDomain`: Userstore domain of the secodnary userstore which is pointed to the old userstore.
+`NewUserStoreDomain`: Where the users should be migrated to from the old usersore
+`AuthMechanism`: This is to tell identity server to consider this authenticator also using the "basic" auth mechanism. This is useful if you are trying to SSO with other service providers which are using default basic authenticator.
