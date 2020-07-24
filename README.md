@@ -19,6 +19,7 @@ Add following block under `<AuthenticatorConfigs>` in **<IS_HOME>/repository/con
  ```
   
 Use `CustomAuthenticator` in authentication steps in Local and Outbound authentication config of the service providers instead of `basic`
+
 Explanation of the configuration parameters
 
 `EnableUserMigration`: Specifies whether to migrate users from the old userstore to new userstore
